@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<h1>Version 4</h1>
 <body><div class="display-5">
     Ejemplo de Service Worker
 
@@ -74,7 +75,7 @@ Esta página utiliza un Service Worker para almacenar algunos recursos en caché
     <script src="js/bootstrap.bundle.js"></script>
     <script>
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/sw.js")
+            navigator.serviceWorker.register("sw.js")
             .then(reg => console.log('Service Worker registrado con éxito', reg))
             .catch(err => console.log('Error al registrar el Service Worker', err));
         }

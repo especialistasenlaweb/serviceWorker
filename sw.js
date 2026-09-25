@@ -1,11 +1,11 @@
-const CACHE = "mi-cache-v3";
+const CACHE = "mi-cache-v4";
 
 const RECURSOS = [
-    "/",
-    "/sw.js",
-    "/index.html",
-    "/css/bootstrap.min.css",
-    "/js/bootstrap.bundle.js"
+    "./",
+    "./sw.js",
+    "./index.html",
+    "./css/bootstrap.min.css",
+    "./js/bootstrap.bundle.js"
 ];
 
 self.addEventListener("install", event => {
