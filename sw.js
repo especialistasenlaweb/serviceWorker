@@ -1,8 +1,8 @@
-const CACHE = "mi-cache-v2";
+const CACHE = "mi-cache-v3";
 
 const RECURSOS = [
     "/",
-    "/js/sw.js",
+    "/sw.js",
     "/index.html",
     "/css/bootstrap.min.css",
     "/js/bootstrap.bundle.js"
