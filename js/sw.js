@@ -1,10 +1,11 @@
-const CACHE = "mi-cache-v1";
+const CACHE = "mi-cache-v2";
 
 const RECURSOS = [
-    "./",
-    "./index.html",
-    "./css/bootstrap.min.css",
-    "./js/bootstrap.bundle.js"
+    "/",
+    "/js/sw.js",
+    "/index.html",
+    "/css/bootstrap.min.css",
+    "/js/bootstrap.bundle.js"
 ];
 
 self.addEventListener("install", event => {
@@ -21,6 +22,10 @@ self.addEventListener("fetch", event => {
         caches.match(event.request)
             .then(respuesta => {
                 return respuesta || fetch(event.request);
+            })
+             .catch(() => {
+                // opcional: devolver una página offline de respaldo
+                return caches.match("/offline.html");
             })
     );
 
